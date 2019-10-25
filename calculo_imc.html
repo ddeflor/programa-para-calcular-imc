@@ -1,69 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<header>
+		
+		<meta charset="UTF-8">
+		<Title>Sabendo meu IMC</Title>
+		<link rel="stylesheet" href="css/projeto-imc.css">
+
+		<h1> Cálculo de IMC </h1>
+
+		<script>
+
+			function pulaLinha() {
+
+				document.write("<br>");
+
+			}
+
+			function mostra(frase) {
+
+				document.write(frase);
+				pulaLinha();
+			}
+
+			function calculaImc(altura, peso) {
+
+				return peso / (altura * altura);
+			}
+
+			var nome = prompt("informe o seu nome");
+			var alturaInformada = prompt(nome + ", informe sua altura");
+			var pesoInformado = prompt(nome + ", informe seu peso");
+
+			var imc = calculaImc(alturaInformada, pesoInformado);
+
+			document.write(nome + ", o seu IMC é " + Math.round(imc));
+
+			pulaLinha();
+
+			if(imc <= 18) {
+
+				mostra("abaixo do peso :(");
+			}
+
+			if(imc >= 19 && imc <= 24) {
+
+				mostra("peso ideal :D ");
+			}
+
+			if(imc >= 25 && imc <= 29) {
+
+				mostra("levemente acima do peso :Z ");
+			}
+
+			if(imc >= 30 && imc <= 34) {
+
+				mostra("obesidade grau I :O ");
+			}
+
+			if(imc >= 35 && imc <= 39) {
+
+				mostra("obesidade grau II: severa >O ");
+			}
+
+			if(imc >= 40) {
+
+				mostra("obesidade grau III: Mórbida O-O ");
+			}
+		</script>
+			
+			<body>
 
 
-<header>
-	
-	<meta charset="UTF-8">
-	<h1> Cálculo de IMC </h1>
-	<link rel="stylesheet" href="css/projeto-imc.css">
+			</body>
 
 
-</header>
-<script>
+	</header>
 
-	function pulaLinha() {
 
-		document.write("<br>");
-
-	}
-
-	function mostra(frase) {
-
-		document.write(frase);
-		pulaLinha();
-	}
-
-	function calculaImc(altura, peso) {
-
-		return peso / (altura * altura);
-	}
-
-	var nome = prompt("informe o seu nome");
-	var alturaInformada = prompt(nome + ", informe sua altura");
-	var pesoInformado = prompt(nome + ", informe seu peso");
-
-	var imc = calculaImc(alturaInformada, pesoInformado);
-
-	document.write(nome + ", o seu IMC é " + Math.round(imc));
-
-	pulaLinha();
-
-	if(imc <= 18) {
-
-		mostra("abaixo do peso :(");
-	}
-
-	if(imc >= 19 && imc <= 24) {
-
-		mostra("peso ideal :D ");
-	}
-
-	if(imc >= 25 && imc <= 29) {
-
-		mostra("levemente acima do peso :Z ");
-	}
-
-	if(imc >= 30 && imc <= 34) {
-
-		mostra("obesidade grau I :O ");
-	}
-
-	if(imc >= 35 && imc <= 39) {
-
-		mostra("obesidade grau II: severa >O ");
-	}
-
-	if(imc >= 40) {
-
-		mostra("obesidade grau III: Mórbida O-O ");
-	}
-</script>
+<html>
